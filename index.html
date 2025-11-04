@@ -1,14 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Join Minecraft Server</title>
-  <!-- This will redirect to your Minecraft server -->
-  <meta http-equiv="refresh" content="0; url=minecraft://?server=23.109.122.189:25636">
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#0f1724;color:#e6eef8}
+    .card{background:#09090b;padding:22px;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.6);max-width:520px;width:100%}
+    h1{margin:0 0 8px;font-size:18px}
+    p{margin:8px 0;color:#bfcfe0}
+    .ip{background:#0b1220;padding:10px;border-radius:8px;margin:10px 0;display:flex;justify-content:space-between;align-items:center}
+    button{background:#1e3a8a;color:white;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
+    .alt{background:#111827;border:1px solid #1f2937}
+    small{color:#94a3b8}
+    .hint{margin-top:12px;background:#071028;padding:10px;border-radius:8px}
+  </style>
 </head>
 <body>
-  <p>Redirecting you to the Minecraft server... 
-     <a href="minecraft://?server=23.109.122.189:25636">Click here if nothing happens</a>
-  </p>
+  <div class="card">
+    <h1>✨ Join Minecraft Server</h1>
+    <p>Attempting to open your Minecraft client. If nothing happens, use the button below to copy the server IP and paste it into your launcher.</p>
+
+    <div class="ip">
+      <div>
+        <div style="font-weight:600">23.109.122.189:25636</div>
+        <small>Server IP</small>
+      </div>
+      <div style="display:flex;gap:8px">
+        <a id="joinLink" href="minecraft://?server=23.109.122.189:25636">
+          <button id="joinBtn">✨ Open Minecraft</button>
+        </a>
+        <button id="copyBtn" class="alt">📋 Copy IP</button>
+      </div>
+    </div>
+
+    <div class="hint">
+      <strong>If you use TLauncher / SKLauncher / other cracked launchers:</strong>
+      <ul>
+        <li>If clicking <em>Open Minecraft</em> does nothing, the launcher likely doesn't support the <code>minecraft://</code> protocol.</li>
+        <li>Use the <em>Copy IP</em> button, open your launcher, go to <em>Multiplayer → Direct Connect</em>, and paste <code>23.109.122.189:25636</code>.</li>
+        <li>If your launcher has its own URL/launcher handler, consult its documentation — not all custom launchers accept protocol links.</li>
+      </ul>
+      <small>Tip: ensure your launcher is installed and set as default for Minecraft on your OS.</small>
+    </div>
+  </div>
+
+  <script>
+    const joinBtn = document.getElementById('joinBtn');
+    const copyBtn = document.getElementById('copyBtn');
+    const joinLink = document.getElementById('joinLink');
+
+    // Attempt an auto-redirect after a short delay (some browsers block instant redirect)
+    setTimeout(() => {
+      // Use a navigation to the protocol; browsers may prompt the user
+      window.location.href = 'minecraft://?server=23.109.122.189:25636';
+      // also update the join button href (redundant but safe)
+      joinLink.href = 'minecraft://?server=23.109.122.189:25636';
+    }, 300);
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('23.109.122.189:25636');
+        copyBtn.textContent = '✅ Copied';
+        setTimeout(()=> copyBtn.textContent = '📋 Copy IP', 2000);
+      } catch (e) {
+        alert('Copy failed — select and copy: 23.109.122.189:25636');
+      }
+    });
+  </script>
 </body>
 </html>
