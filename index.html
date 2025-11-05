@@ -6,145 +6,139 @@
   <title>WTK Minecraft Estate</title>
   <style>
     body {
-      font-family: "Segoe UI", Roboto, system-ui, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
       margin: 0;
-      background: radial-gradient(circle at 20% 20%, #0a0f1f, #040711 80%);
-      color: #dbe5f7;
+      background: linear-gradient(135deg, #0a0f1a 0%, #111a2b 100%);
+      color: #e3ecfa;
     }
+
     .card {
-      background: rgba(8, 10, 20, 0.9);
-      padding: 26px;
+      background: rgba(15, 20, 35, 0.9);
+      padding: 28px;
       border-radius: 14px;
-      box-shadow: 0 0 24px rgba(30, 58, 138, 0.3), inset 0 0 8px rgba(59, 130, 246, 0.15);
-      max-width: 560px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+      max-width: 540px;
       width: 100%;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-    }
-    h1 {
-      margin: 0 0 12px;
-      font-size: 20px;
       text-align: center;
-      color: #a6c8ff;
+      border: 1px solid #1e3a8a;
     }
-    h1::before {
-      content: "💠 ";
+
+    h1 {
+      font-size: 20px;
+      color: #9db8ff;
+      margin-bottom: 6px;
     }
-    h1::after {
-      content: " 💠";
-    }
+
     p {
       margin: 8px 0;
-      color: #b6c7dd;
-      text-align: center;
+      color: #bfcfe0;
+      font-size: 15px;
     }
+
     .ip {
-      background: #0b1220;
+      background: #0c1323;
       padding: 12px;
       border-radius: 10px;
       margin: 14px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border: 1px solid rgba(59, 130, 246, 0.2);
     }
+
     button {
-      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-      color: #fff;
+      background: #1e3a8a;
+      color: white;
       border: none;
       padding: 8px 12px;
       border-radius: 8px;
       cursor: pointer;
-      font-weight: 500;
-      box-shadow: 0 0 6px rgba(59, 130, 246, 0.5);
-      transition: all 0.2s ease;
+      transition: background 0.3s ease;
     }
+
     button:hover {
-      background: linear-gradient(135deg, #2a49a5, #4f9eff);
-      transform: scale(1.03);
+      background: #3053cc;
     }
+
     .alt {
       background: #111827;
       border: 1px solid #1f2937;
-      color: #d1d5db;
-      box-shadow: none;
     }
-    .alt:hover {
-      background: #1e293b;
-    }
-    small {
-      color: #94a3b8;
-    }
+
     .hint {
       margin-top: 14px;
-      background: #0a1020;
+      background: #0a122c;
       padding: 12px;
-      border-radius: 8px;
-      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 10px;
+      text-align: left;
       font-size: 14px;
     }
-    .hint strong {
-      color: #93c5fd;
+
+    strong {
+      color: #a5bfff;
     }
+
     ul {
-      margin: 8px 0 0 16px;
-      padding: 0;
+      margin-top: 8px;
+      margin-bottom: 6px;
+      padding-left: 18px;
     }
-    li {
-      margin-bottom: 4px;
+
+    small {
+      color: #7e8ea7;
     }
-    footer {
-      text-align: center;
-      margin-top: 14px;
+
+    .footer {
+      margin-top: 18px;
       font-size: 13px;
-      color: #6b7280;
+      color: #6f7b91;
+    }
+
+    a {
+      color: #9db8ff;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>Phantomhive Minecraft Estate</h1>
-    <p>Welcome to the WTK Minecraft Server — entry to this manor is granted by invitation only.</p>
+    <h1>🏰 WTK Minecraft Estate</h1>
+    <p>Attempting to open your Minecraft client. If nothing happens, use the button below to copy the server IP and paste it into your launcher.</p>
 
     <div class="ip">
       <div>
-        <div style="font-weight:600;font-size:15px;">23.109.122.189:25636</div>
+        <div style="font-weight:600">23.109.122.189:25636</div>
         <small>Server IP</small>
       </div>
-      <div style="display:flex;gap:8px;">
+      <div style="display:flex;gap:8px">
         <a id="joinLink" href="minecraft://?server=23.109.122.189:25636">
-          <button id="joinBtn">🎩 Enter Estate</button>
+          <button id="joinBtn">✨ Open Minecraft</button>
         </a>
-        <button id="copyBtn" class="alt">📜 Copy IP</button>
+        <button id="copyBtn" class="alt">📋 Copy IP</button>
       </div>
     </div>
 
     <div class="hint">
-      <strong>⚠️ Whitelist Notice:</strong>
+      <strong>Whitelist Notice:</strong>
       <ul>
-        <li>This server is <em>whitelist-only</em>. Unlisted players cannot join.</li>
-        <li>To request entry, contact the steward (<strong>Toka</strong>) through Discord.</li>
-        <li>Provide your <code>Minecraft Username</code> and reason for entry in a respectful manner.</li>
+        <li>This server is <em>whitelist-only</em>. You must request access before joining.</li>
+        <li>Click below for a step-by-step guide on how to request access.</li>
       </ul>
+      <a href="https://tokahv.github.io/TokaHub/whitelist-tutorial" target="_blank">
+        <button style="width:100%;margin-top:8px;">📘 Request Whitelist Access</button>
+      </a>
+      <small>Tip: If clicking <em>Open Minecraft</em> doesn’t work, use <em>Copy IP</em> instead.</small>
     </div>
 
-    <div class="hint">
-      <strong>💬 Connection Help:</strong>
-      <ul>
-        <li>If the <em>Enter Estate</em> button doesn’t open Minecraft, your launcher may not support <code>minecraft://</code> links.</li>
-        <li>Use the <em>Copy IP</em> button, then paste it into <strong>Multiplayer → Direct Connect</strong>.</li>
-        <li>Ensure your launcher (TLauncher, SKLauncher, etc.) is installed and ready.</li>
-      </ul>
+    <div class="footer">
+      Made with 💙 by <strong>Toka</strong>
     </div>
-
-    <footer>👑 House of Phantomhive • Maintained by Ciel & Toka</footer>
   </div>
 
   <script>
-    const joinBtn = document.getElementById('joinBtn');
     const copyBtn = document.getElementById('copyBtn');
     const joinLink = document.getElementById('joinLink');
 
@@ -156,10 +150,10 @@
     copyBtn.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText('23.109.122.189:25636');
-        copyBtn.textContent = '✅ Copied to Scroll';
-        setTimeout(()=> copyBtn.textContent = '📜 Copy IP', 2000);
-      } catch (e) {
-        alert('Copy failed — please copy manually: 23.109.122.189:25636');
+        copyBtn.textContent = '✅ Copied';
+        setTimeout(() => copyBtn.textContent = '📋 Copy IP', 2000);
+      } catch {
+        alert('Copy failed — select and copy: 23.109.122.189:25636');
       }
     });
   </script>
