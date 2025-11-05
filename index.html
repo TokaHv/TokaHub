@@ -3,46 +3,144 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Join Minecraft Server</title>
+  <title>Phantomhive Minecraft Estate</title>
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#0f1724;color:#e6eef8}
-    .card{background:#09090b;padding:22px;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.6);max-width:520px;width:100%}
-    h1{margin:0 0 8px;font-size:18px}
-    p{margin:8px 0;color:#bfcfe0}
-    .ip{background:#0b1220;padding:10px;border-radius:8px;margin:10px 0;display:flex;justify-content:space-between;align-items:center}
-    button{background:#1e3a8a;color:white;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
-    .alt{background:#111827;border:1px solid #1f2937}
-    small{color:#94a3b8}
-    .hint{margin-top:12px;background:#071028;padding:10px;border-radius:8px}
+    body {
+      font-family: "Segoe UI", Roboto, system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: radial-gradient(circle at 20% 20%, #0a0f1f, #040711 80%);
+      color: #dbe5f7;
+    }
+    .card {
+      background: rgba(8, 10, 20, 0.9);
+      padding: 26px;
+      border-radius: 14px;
+      box-shadow: 0 0 24px rgba(30, 58, 138, 0.3), inset 0 0 8px rgba(59, 130, 246, 0.15);
+      max-width: 560px;
+      width: 100%;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      text-align: center;
+      color: #a6c8ff;
+    }
+    h1::before {
+      content: "💠 ";
+    }
+    h1::after {
+      content: " 💠";
+    }
+    p {
+      margin: 8px 0;
+      color: #b6c7dd;
+      text-align: center;
+    }
+    .ip {
+      background: #0b1220;
+      padding: 12px;
+      border-radius: 10px;
+      margin: 14px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+    button {
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      box-shadow: 0 0 6px rgba(59, 130, 246, 0.5);
+      transition: all 0.2s ease;
+    }
+    button:hover {
+      background: linear-gradient(135deg, #2a49a5, #4f9eff);
+      transform: scale(1.03);
+    }
+    .alt {
+      background: #111827;
+      border: 1px solid #1f2937;
+      color: #d1d5db;
+      box-shadow: none;
+    }
+    .alt:hover {
+      background: #1e293b;
+    }
+    small {
+      color: #94a3b8;
+    }
+    .hint {
+      margin-top: 14px;
+      background: #0a1020;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      font-size: 14px;
+    }
+    .hint strong {
+      color: #93c5fd;
+    }
+    ul {
+      margin: 8px 0 0 16px;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 4px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 14px;
+      font-size: 13px;
+      color: #6b7280;
+    }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>✨ Join Minecraft Server</h1>
-    <p>Attempting to open your Minecraft client. If nothing happens, use the button below to copy the server IP and paste it into your launcher.</p>
+    <h1>Phantomhive Minecraft Estate</h1>
+    <p>Welcome to the WTK Minecraft Server — entry to this manor is granted by invitation only.</p>
 
     <div class="ip">
       <div>
-        <div style="font-weight:600">23.109.122.189:25636</div>
+        <div style="font-weight:600;font-size:15px;">23.109.122.189:25636</div>
         <small>Server IP</small>
       </div>
-      <div style="display:flex;gap:8px">
+      <div style="display:flex;gap:8px;">
         <a id="joinLink" href="minecraft://?server=23.109.122.189:25636">
-          <button id="joinBtn">✨ Open Minecraft</button>
+          <button id="joinBtn">🎩 Enter Estate</button>
         </a>
-        <button id="copyBtn" class="alt">📋 Copy IP</button>
+        <button id="copyBtn" class="alt">📜 Copy IP</button>
       </div>
     </div>
 
     <div class="hint">
-      <strong>If you use TLauncher / SKLauncher / other cracked launchers:</strong>
+      <strong>⚠️ Whitelist Notice:</strong>
       <ul>
-        <li>If clicking <em>Open Minecraft</em> does nothing, the launcher likely doesn't support the <code>minecraft://</code> protocol.</li>
-        <li>Use the <em>Copy IP</em> button, open your launcher, go to <em>Multiplayer → Direct Connect</em>, and paste <code>23.109.122.189:25636</code>.</li>
-        <li>If your launcher has its own URL/launcher handler, consult its documentation — not all custom launchers accept protocol links.</li>
+        <li>This server is <em>whitelist-only</em>. Unlisted players cannot join.</li>
+        <li>To request entry, contact the steward (<strong>Toka</strong>) through Discord.</li>
+        <li>Provide your <code>Minecraft Username</code> and reason for entry in a respectful manner.</li>
       </ul>
-      <small>Tip: ensure your launcher is installed and set as default for Minecraft on your OS.</small>
     </div>
+
+    <div class="hint">
+      <strong>💬 Connection Help:</strong>
+      <ul>
+        <li>If the <em>Enter Estate</em> button doesn’t open Minecraft, your launcher may not support <code>minecraft://</code> links.</li>
+        <li>Use the <em>Copy IP</em> button, then paste it into <strong>Multiplayer → Direct Connect</strong>.</li>
+        <li>Ensure your launcher (TLauncher, SKLauncher, etc.) is installed and ready.</li>
+      </ul>
+    </div>
+
+    <footer>👑 House of Phantomhive • Maintained by Ciel & Toka</footer>
   </div>
 
   <script>
@@ -50,21 +148,18 @@
     const copyBtn = document.getElementById('copyBtn');
     const joinLink = document.getElementById('joinLink');
 
-    // Attempt an auto-redirect after a short delay (some browsers block instant redirect)
     setTimeout(() => {
-      // Use a navigation to the protocol; browsers may prompt the user
       window.location.href = 'minecraft://?server=23.109.122.189:25636';
-      // also update the join button href (redundant but safe)
       joinLink.href = 'minecraft://?server=23.109.122.189:25636';
     }, 300);
 
     copyBtn.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText('23.109.122.189:25636');
-        copyBtn.textContent = '✅ Copied';
-        setTimeout(()=> copyBtn.textContent = '📋 Copy IP', 2000);
+        copyBtn.textContent = '✅ Copied to Scroll';
+        setTimeout(()=> copyBtn.textContent = '📜 Copy IP', 2000);
       } catch (e) {
-        alert('Copy failed — select and copy: 23.109.122.189:25636');
+        alert('Copy failed — please copy manually: 23.109.122.189:25636');
       }
     });
   </script>
